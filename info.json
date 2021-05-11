@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "606f47126295e93ed13e8b4a502d71bb4755d3f8",
+    "author": "Scott Chamberlain <sckott@fastmail.com>",
+    "time": "2021-05-11 00:40:40",
+    "files": 1,
+    "merge": false,
+    "message": "fix docs url\n"
+  },
+  "remote": "https://github.com/ropensci/bold",
+  "pkg": "bold"
+}
