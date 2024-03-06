@@ -1,0 +1,12 @@
+{
+  "commit": {
+    "commit": "90e44fb624b06d872903fc46b6fe912da7ba7538",
+    "author": "Salix <31168746+salix-d@users.noreply.github.com>",
+    "time": "2023-09-08 19:49:35",
+    "files": 4,
+    "merge": true,
+    "message": "Merge pull request #100 from ropensci/99-failing-installing-bold-package\n\nfixed anonymous functions syntaxe"
+  },
+  "repo": "https://github.com/ropensci/bold",
+  "pkg": "bold"
+}
