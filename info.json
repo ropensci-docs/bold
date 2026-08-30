@@ -1,0 +1,13 @@
+{
+  "commit": {
+    "commit": "8bfd90ace59c3663d8478e46b22c5eed8499229e",
+    "author": "Salix Dubois <31168746+salix-d@users.noreply.github.com>",
+    "time": "2024-12-13T22:53:13Z",
+    "files": 1,
+    "merge": true,
+    "message": "Merge pull request #113 from ropensci/setup-rhub\n\nCreate rhub.yaml"
+  },
+  "repo": "https://github.com/ropensci/bold",
+  "pkg": "bold",
+  "time": "2026-08-30T07:33:37Z"
+}
