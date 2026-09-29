@@ -1,0 +1,59 @@
+# Filter BOLD specimen + sequence data (output of bold_seqspec)
+
+Picks either shortest or longest sequences, for a given grouping
+variable (e.g., species name)
+
+## Usage
+
+``` r
+bold_filter(x, by, how = "max", returnTibble = TRUE)
+```
+
+## Arguments
+
+- x:
+
+  (data.frame) a data.frame, as returned from
+  [`bold_seqspec`](https://docs.ropensci.org/bold/reference/bold_seqspec.md).
+  Note that some combinations of parameters in
+  [`bold_seqspec`](https://docs.ropensci.org/bold/reference/bold_seqspec.md)
+  don't return a data.frame. Stops with error message if this is not a
+  data.frame. Required.
+
+- by:
+
+  (character) the column by which to group. For example, if you want the
+  longest sequence for each unique species name, then pass
+  **species_name**. If the column doesn't exist, error with message
+  saying so. Required.
+
+- how:
+
+  (character) one of "max" or "min", which get used as `which.max` or
+  `which.min` to get the longest or shortest sequence, respectively.
+  Note that we remove gap/alignment characters (`-`)
+
+- returnTibble:
+
+  Whether the output should be a tibble or a data.frame. Default is
+  TRUE, but verifies that the `tibble` package is installed, if it's
+  not, it will be returned as data.frame. Since this package is only
+  used in this function, doing this so it can be moved to suggested
+  instead of dependency without breaking old scripts.
+
+## Value
+
+a data.frame
+
+## Examples
+
+``` r
+if (FALSE) { # \dontrun{
+res <- bold_seqspec(taxon = 'Osmia')
+maxx <- bold_filter(res, by = "species_name")
+minn <- bold_filter(res, by = "species_name", how = "min")
+
+vapply(maxx$nucleotides, nchar, 1, USE.NAMES = FALSE)
+vapply(minn$nucleotides, nchar, 1, USE.NAMES = FALSE)
+} # }
+```
